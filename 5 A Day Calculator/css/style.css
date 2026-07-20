@@ -1,0 +1,564 @@
+/* ==========================================================
+   | ORDO 5 A Day Assessment Tool
+   Version 1.0
+========================================================== */
+
+:root{
+
+    --primary:#2D6A4F;
+    --primary-dark:#1F513C;
+    --secondary:#F8F8F8;
+    --border:#E5E5E5;
+    --text:#222222;
+    --muted:#6C757D;
+    --success:#2E8B57;
+    --danger:#C0392B;
+    --warning:#F39C12;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+    --radius:12px;
+    --transition:.25s ease;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    background:#FAFAFA;
+    line-height:1.5;
+
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+
+    width:min(1200px,92%);
+    margin:auto;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    background:#ffffff;
+    border-bottom:1px solid var(--border);
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+
+}
+
+.header-container{
+
+    display:flex;
+    align-items:center;
+    gap:24px;
+    padding:20px 0;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.logo img{
+
+    width:120px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+
+
+}
+
+.title h1{
+
+    font-family:'EB Garamond', serif;
+    font-size:2.4rem;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:6px;
+
+}
+
+.title p{
+
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.5;
+
+}
+
+/* ===========================
+   Wizard
+=========================== */
+
+.wizard{
+
+    margin:45px auto 25px;
+
+}
+
+.steps{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.step{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:#ffffff;
+    border:1px solid var(--border);
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.step span{
+
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#DDDDDD;
+    color:#ffffff;
+
+}
+
+.step.active{
+
+    background:var(--primary);
+    color:white;
+
+}
+
+.step.active span{
+
+    background:white;
+    color:var(--primary);
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card{
+
+    width:min(1100px,92%);
+    margin:35px auto;
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:40px;
+
+}
+
+.card h2{
+
+    font-family:'EB Garamond', serif;
+    font-size:2.2rem;
+    margin-bottom:30px;
+
+    color:var(--primary);
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:22px;
+
+}
+
+.field{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.field label{
+
+    margin-bottom:8px;
+    font-weight:600;
+
+}
+
+.field input,
+.field select{
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:var(--transition);
+
+    background:white;
+
+}
+
+.field input:focus,
+.field select:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(45,106,79,.15);
+
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+thead{
+
+    background:#F4F4F4;
+
+}
+
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+    border-bottom:2px solid var(--border);
+
+    font-weight:600;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+tbody tr:hover{
+
+    background:#FAFAFA;
+
+}
+
+td input,
+td select{
+
+    width:100%;
+
+    padding:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.button-row{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.primary{
+
+    background:var(--primary);
+    color:white;
+
+}
+
+.primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+.secondary{
+
+    background:#EEEEEE;
+    color:#333333;
+
+}
+
+.secondary:hover{
+
+    background:#DDDDDD;
+
+}
+
+/* ===========================
+   Results
+=========================== */
+
+.results-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.result-box{
+
+    background:#F9F9F9;
+
+    border-left:6px solid var(--primary);
+
+    padding:25px;
+
+    border-radius:10px;
+
+}
+
+.result-box h3{
+
+    font-size:16px;
+
+    margin-bottom:12px;
+
+    color:var(--muted);
+
+}
+
+.result-box p{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    margin-top:80px;
+
+    background:white;
+
+    border-top:1px solid var(--border);
+
+    padding:30px;
+
+    text-align:center;
+
+    color:var(--muted);
+
+}
+
+/* ===========================
+   Utilities
+=========================== */
+
+.success{
+
+    color:var(--success);
+
+    font-weight:700;
+
+}
+
+.warning{
+
+    color:var(--warning);
+
+    font-weight:700;
+
+}
+
+.error{
+
+    color:var(--danger);
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.header-container{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+.logo img{
+
+    width:80px;
+
+}
+
+.title h1{
+
+    font-size:1.6rem;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+.steps{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.step{
+
+    width:100%;
+    justify-content:center;
+
+}
+
+.button-row{
+
+    flex-direction:column;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+.results-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+table{
+
+    display:block;
+    overflow-x:auto;
+
+}
+
+}
